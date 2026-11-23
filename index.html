@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f1ea">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Chef Nem">
+  <title>Chef Nem</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="top">
+    <div class="brand"><img src="icons/icon-192.png" alt=""><span id="appName">Chef Nem</span></div>
+    <div id="sync" class="sync" aria-live="polite"></div>
+  </header>
+  <main id="view"></main>
+  <nav id="tabs" hidden>
+    <button data-tab="plan"><span class="i">🗓</span>Plan</button>
+    <button data-tab="groceries"><span class="i">🛒</span>Groceries</button>
+    <button data-tab="recipes"><span class="i">🍳</span>Recipes</button>
+    <button data-tab="saved"><span class="i">★</span>Saved</button>
+    <button data-tab="more"><span class="i">⋯</span>More</button>
+  </nav>
+  <div id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
