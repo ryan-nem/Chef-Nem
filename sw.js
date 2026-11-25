@@ -1,7 +1,8 @@
 /* Chef Nem service worker: offline app shell + push notifications. */
-const CACHE = 'chefnem-v1.0.0';
+const CACHE = 'chefnem-v1.1.0';
 const SHELL = ['./', 'index.html', 'app.js', 'styles.css', 'manifest.webmanifest',
-  'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
+  'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
+  'icons/favicon-32.png', 'icons/badge-96.png'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -39,7 +40,7 @@ self.addEventListener('push', (e) => {
   const options = {
     body: d.body || n.body || '',
     icon: 'icons/icon-192.png',
-    badge: 'icons/icon-192.png',
+    badge: 'icons/badge-96.png', // white silhouette; Android tints it in the status bar
     tag: d.tag || 'chefnem',
     data: { url: d.url || (p.fcmOptions && p.fcmOptions.link) || './' }
   };

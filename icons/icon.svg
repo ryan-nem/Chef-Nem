@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="25%" r="85%">
+      <stop offset="0" stop-color="#FFB257"/>
+      <stop offset="0.55" stop-color="#F7842A"/>
+      <stop offset="1" stop-color="#D9581A"/>
+    </radialGradient>
+    <linearGradient id="pot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34506B"/>
+      <stop offset="1" stop-color="#1E3247"/>
+    </linearGradient>
+    <linearGradient id="hat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3ECE2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background (full-bleed; iOS/Android round the corners) -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- sparkles -->
+  <g fill="#FFE29A">
+    <path d="M178 250 l14 40 40 14 -40 14 -14 40 -14 -40 -40 -14 40 -14z"/>
+    <path d="M846 210 l10 28 28 10 -28 10 -10 28 -10 -28 -28 -10 28 -10z"/>
+    <path d="M858 470 l8 22 22 8 -22 8 -8 22 -8 -22 -22 -8 22 -8z" opacity="0.8"/>
+    <circle cx="150" cy="470" r="10" opacity="0.8"/>
+  </g>
+
+  <!-- ground shadow -->
+  <ellipse cx="512" cy="878" rx="270" ry="26" fill="#A8410F" opacity="0.35"/>
+
+  <!-- chef hat puff -->
+  <g fill="url(#hat)">
+    <circle cx="372" cy="356" r="104"/>
+    <circle cx="652" cy="356" r="104"/>
+    <circle cx="512" cy="282" r="138"/>
+    <rect x="330" y="340" width="364" height="130"/>
+  </g>
+  <g fill="none" stroke="#E4D9CA" stroke-width="12" stroke-linecap="round">
+    <path d="M430 350 Q440 410 426 452"/>
+    <path d="M594 350 Q584 410 598 452"/>
+  </g>
+  <!-- hat band -->
+  <rect x="318" y="440" width="388" height="104" rx="22" fill="#FFFFFF"/>
+  <rect x="318" y="440" width="388" height="104" rx="22" fill="none" stroke="#E4D9CA" stroke-width="6"/>
+  <text x="512" y="520" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="78" letter-spacing="10" fill="#E8641B">NEM</text>
+
+  <!-- pot handles -->
+  <rect x="176" y="596" width="90" height="46" rx="23" fill="#1E3247"/>
+  <rect x="758" y="596" width="90" height="46" rx="23" fill="#1E3247"/>
+
+  <!-- pot body -->
+  <path d="M236 570 H788 V650 Q788 860 588 860 H436 Q236 860 236 650 Z" fill="url(#pot)"/>
+  <!-- rim -->
+  <rect x="214" y="540" width="596" height="58" rx="29" fill="#4A6A88"/>
+  <rect x="244" y="552" width="300" height="12" rx="6" fill="#7FA0BE" opacity="0.6"/>
+
+  <!-- face -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round">
+    <path d="M396 690 Q426 656 456 690"/>
+    <path d="M568 690 Q598 656 628 690"/>
+  </g>
+  <path d="M452 738 Q512 800 572 738 Z" fill="#FFFFFF"/>
+  <path d="M478 760 Q512 786 546 760 Q512 774 478 760 Z" fill="#FF7A6B"/>
+  <circle cx="372" cy="742" r="26" fill="#FF8C7E" opacity="0.85"/>
+  <circle cx="652" cy="742" r="26" fill="#FF8C7E" opacity="0.85"/>
+
+  <!-- shine on pot -->
+  <path d="M278 640 Q282 760 350 812" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.18"/>
+</svg>

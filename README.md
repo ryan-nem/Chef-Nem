@@ -16,6 +16,6 @@ A family meal-planning app: weekly plan and approval, grocery lists, recipes and
 |---|---|
 | `index.html`, `app.js`, `styles.css` | The app |
 | `sw.js` | Offline support and notifications |
-| `manifest.webmanifest`, `icons/` | Home Screen name and icon |
+| `manifest.webmanifest`, `icons/` | Home Screen name and icon (`icons/icon.svg` is the source logo; PNGs are exported from it) |
 | `apps-script/Api.gs` | Goes into the sheet's Apps Script project |
 | `docs/` | Setup guides |
