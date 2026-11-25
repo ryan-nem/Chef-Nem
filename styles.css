@@ -153,9 +153,46 @@ nav#tabs {
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
 }
 nav#tabs[hidden] { display: none; }
-nav#tabs button { border: 0; background: none; font-size: 11px; font-weight: 600; color: var(--muted); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
-nav#tabs button .i { font-size: 20px; line-height: 1; }
-nav#tabs button.on { color: var(--accent); }
+nav#tabs button {
+  border: 0; background: none; font-size: 11px; font-weight: 600; color: var(--muted);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  transition: color .2s;
+}
+nav#tabs [data-tab="plan"]      { --c: #F7842A; --t: #C8541F; }
+nav#tabs [data-tab="groceries"] { --c: #3FA66B; --t: #2F7D4F; }
+nav#tabs [data-tab="recipes"]   { --c: #3F6A92; --t: #34506B; }
+nav#tabs [data-tab="saved"]     { --c: #F5B82E; --t: #A87400; }
+nav#tabs [data-tab="more"]      { --c: #E86A7A; --t: #C2475A; }
+nav#tabs .i {
+  display: grid; place-items: center; width: 52px; height: 32px; border-radius: 16px;
+  transition: background-color .25s;
+}
+nav#tabs svg { width: 26px; height: 26px; overflow: visible; transition: transform .25s cubic-bezier(.3,1.6,.5,1); }
+nav#tabs .o { fill: none; stroke: var(--muted); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: stroke .2s; }
+nav#tabs .f { fill: color-mix(in srgb, var(--c) 55%, var(--card)); transition: fill .2s; }
+nav#tabs .f2 { fill: var(--card); transition: fill .2s; }
+nav#tabs .dot { fill: var(--card); }
+nav#tabs .spark, nav#tabs .steam { opacity: 0; transition: opacity .25s; }
+nav#tabs button.on { color: var(--t); }
+nav#tabs button.on .i { background: color-mix(in srgb, var(--c) 18%, transparent); }
+nav#tabs button.on svg { transform: translateY(-1px) scale(1.08); }
+nav#tabs button.on .o { stroke: var(--t); }
+nav#tabs button.on .f { fill: var(--c); }
+nav#tabs button.on .f2 { fill: color-mix(in srgb, var(--c) 22%, var(--card)); }
+nav#tabs button.on .spark { opacity: 1; animation: cn-twinkle 1.6s ease-in-out infinite; transform-origin: 19.5px 4.9px; }
+nav#tabs button.on .steam { opacity: 1; animation: cn-steam 1.8s ease-in-out infinite; }
+nav#tabs button:active svg { transform: scale(.9); }
+@keyframes cn-twinkle { 50% { transform: scale(.55) rotate(45deg); } }
+@keyframes cn-steam { 0%, 100% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(-1.2px); opacity: .55; } }
+@media (prefers-color-scheme: dark) {
+  nav#tabs button[data-tab="recipes"] { --c: #6E9CCB; }
+  nav#tabs button.on { color: var(--c); }
+  nav#tabs button.on .o { stroke: color-mix(in srgb, var(--c) 70%, white); }
+}
+@media (prefers-reduced-motion: reduce) {
+  nav#tabs svg, nav#tabs .i { transition: none; }
+  nav#tabs button.on .spark, nav#tabs button.on .steam { animation: none; }
+}
 
 #toast {
   position: fixed; left: 50%; transform: translate(-50%, 20px);

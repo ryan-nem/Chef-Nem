@@ -1,5 +1,5 @@
 /* Chef Nem service worker: offline app shell + push notifications. */
-const CACHE = 'chefnem-v1.1.0';
+const CACHE = 'chefnem-v1.2.0';
 const SHELL = ['./', 'index.html', 'app.js', 'styles.css', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
   'icons/favicon-32.png', 'icons/badge-96.png'];
